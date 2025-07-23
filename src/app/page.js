@@ -1,10 +1,10 @@
 import { NavBar } from "@/components/navbar/NavBar";
-import { HeroSection } from "./sections/Hero/page";
-import { AboutSection } from "./sections/About-us/page";
 import { SolutionPage } from "./sections/Solution-page/SolutionPage";
 import { Footer } from "@/components/footer/Footer";
 import { UpButton } from "@/components/upButton/UpButton";
 import { Stepper } from "./sections/Stepper/Stepper";
+import { AboutSection } from "./sections/About-us/AboutSection";
+import { HeroSection } from "./sections/Hero/HeroSection";
 
 export default function Home() {
   return (
