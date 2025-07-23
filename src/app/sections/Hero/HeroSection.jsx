@@ -1,4 +1,3 @@
-"use server"
 import { GreenTopWave } from '@/components/wave/GreenTopWave';
 import './hero-style.css';
 import mockup from '../../../imgs/osp-mockup-hero.png';
@@ -33,8 +32,10 @@ export const HeroSection = () => {
 
         </div>
 
-        <Image src={mockup} className='w-[100vw] md:w-[100%] lg:w-[100%] animate__animated animate__pulse animate__repeat-2  mt-10 lg:mt-0' alt='osp-mockup'/>
-      </div>
+      <div className='w-[100vw] md:w-[100%] lg:w-[100%] animate__animated animate__pulse animate__repeat-2 mt-10 lg:mt-0'>
+        <Image src={mockup} alt='osp-mockup' />
+      </div>      
+</div>
     </div>
   )
 }
