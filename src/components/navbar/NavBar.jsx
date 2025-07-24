@@ -11,9 +11,7 @@ export const NavBar = () => {
     { label: "Inicio", link: "home" },
     { label: "Sobre nosotros", link: "about" },
     { label: "Solución", link: "solution" },
-    { label: "Preguntas frecuentes", link: "questions" },
-    { label: "Dashboard", link: "/dashboard" }
-  ];
+    { label: "Preguntas frecuentes", link: "questions" }  ];
 
   const [isOpen, setOpen] = useState(false);
 
