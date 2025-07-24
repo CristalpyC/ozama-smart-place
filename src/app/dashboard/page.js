@@ -29,9 +29,11 @@ export default function DashboardPage() {
           </h3>
         </div>
 
-        {mockups && mockups.map((items, index) => (
-          <Image src={items} className="m-auto" alt="mockup"/>
-        ))}
+        <div>
+          {mockups && mockups.map((items, index) => (
+          <Image key={index} src={items} className="m-auto" alt="mockup"/>
+          ))}
+        </div>
     </div>
     </div>
   )
