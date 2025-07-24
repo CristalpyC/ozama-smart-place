@@ -12,6 +12,7 @@ export const NavBar = () => {
     { label: "Sobre nosotros", link: "about" },
     { label: "Solución", link: "solution" },
     { label: "Preguntas frecuentes", link: "questions" },
+    { label: "Dashboard", link: "/dashboard" }
   ];
 
   const [isOpen, setOpen] = useState(false);
@@ -32,7 +33,7 @@ export const NavBar = () => {
         behavior: "smooth",
       });
 
-      setOpen(false); // Cierra el menú móvil después del click
+      setOpen(false); 
     }
   };
 
