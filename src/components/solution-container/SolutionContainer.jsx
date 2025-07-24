@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import reportsMockup from '../../imgs/reports-mockup.png';
-import adminMockup from '../../imgs/help-mockup.png';
 import congestedMockup from '../../imgs/congested-mockup.png';
 import routeMockup from '../../imgs/mockup-pic-01.png';
 import payMockup from '../../imgs/pay-mockup.png';
 import LiveRoutesMockup from '../../imgs/routes-mockup-02.png';
+import adminMockup from '../../imgs/admin-mockup.png';
 import { Slide } from "react-awesome-reveal";
 
 export const SolutionContainer = () => {
@@ -14,6 +14,7 @@ export const SolutionContainer = () => {
       {title: "¿Tienes una queja o duda?", text: "Escríbenos y te responderemos pronto.", url: reportsMockup},
       {title: "Rutas en tiempo real", text: "Consulta el estado actual de cada ruta y evita retrasos.", url: LiveRoutesMockup},
       {title: "Evita las horas pico", text: "Visualiza el flujo de pasajeros en cada estación del metro y teleférico.", url: congestedMockup},
+      {title: "Centro de control", text: "Supervisa el estado del sistema, administra el contenido y gestiona la actividad de la plataforma en tiempo real. Todo el poder de gestión en una sola interfaz.", url: adminMockup}
     ];
 
   return (

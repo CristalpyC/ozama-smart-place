@@ -35,7 +35,7 @@ export const HeroSection = () => {
       <div className='w-[100vw] md:w-[100%] lg:w-[100%] animate__animated animate__pulse animate__repeat-2 mt-10 lg:mt-0'>
         <Image src={mockup} alt='osp-mockup' />
       </div>      
-</div>
+    </div>
     </div>
   )
 }
