@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import usPic from "../../../imgs/us-pic.png";
-import { TeamCards } from "@/components/us-cards/TeamCards";
 import { Zoom, Fade } from "react-awesome-reveal";
+import { TeamCards } from "../../../components/us-cards/TeamCards";
 
 export const AboutSection = () => {
   return (

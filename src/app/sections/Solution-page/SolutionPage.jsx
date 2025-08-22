@@ -1,7 +1,7 @@
-import { GreenTopWave } from '@/components/wave/GreenTopWave'
+import { GreenTopWave } from '../../../components/wave/GreenTopWave'
 import React from 'react'
 import Image from 'next/image';
-import { SolutionContainer } from '@/components/solution-container/SolutionContainer';
+import { SolutionContainer } from '../../../components/solution-container/SolutionContainer';
 import { Slide } from "react-awesome-reveal";
 import loginMockup from '../../../imgs/login-mockup.png'
 

@@ -1,10 +1,11 @@
-import { NavBar } from "@/components/navbar/NavBar";
+import { NavBar } from "../components/navbar/NavBar";
 import { SolutionPage } from "./sections/Solution-page/SolutionPage";
-import { Footer } from "@/components/footer/Footer";
-import { UpButton } from "@/components/upButton/UpButton";
+import { Footer } from "../components/footer/Footer.jsx";
+import { UpButton } from "../components/upButton/UpButton";
 import { Stepper } from "./sections/Stepper/Stepper";
 import { AboutSection } from "./sections/About-us/AboutSection";
 import { HeroSection } from "./sections/Hero/HeroSection";
+import { TrailerVideo } from "./sections/Trailer/TrailerVideo.jsx";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <AboutSection />
         <SolutionPage />
         <Stepper />
+        <TrailerVideo />
         <Footer />
       </main>
     </div>

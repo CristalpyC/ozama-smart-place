@@ -1,4 +1,4 @@
-import { GreenTopWave } from '@/components/wave/GreenTopWave';
+import { GreenTopWave } from '../../../components/wave/GreenTopWave';
 import './hero-style.css';
 import mockup from '../../../imgs/osp-mockup-hero.png';
 import Image from 'next/image';

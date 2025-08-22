@@ -1,4 +1,4 @@
-import { GreenTopWave } from "@/components/wave/GreenTopWave";
+import { GreenTopWave } from "../../../components/wave/GreenTopWave";
 import Image from "next/image";
 import React from "react";
 import lightPic from "../../../imgs/light-icon.jpg";
