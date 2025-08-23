@@ -1,20 +1,21 @@
 "use client";
 import React, { useState } from "react";
-import ospLogo from "../../imgs/osp-logo.png";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import ospLogo from "../../imgs/osp-logo.png";
 
 export const NavBar = () => {
-  const LIGHT_GREEN = "#5DCC6F";
-  const SECONDARY_GREEN = "#E0F7DB";
-
   const menuItems = [
-    { label: "Inicio", link: "home" },
-    { label: "Sobre nosotros", link: "about" },
-    { label: "Solución", link: "solution" },
-    { label: "Preguntas frecuentes", link: "questions" },
-    { label: "Trailer", link: "trailer" }  ];
+    { label: "Inicio", link: "home", type: "section" },
+    { label: "Ciudadanos", link: "/mobile", type: "page" },
+    { label: "Instituciones", link: "/dashboard", type: "page" },
+    { label: "Sobre nosotros", link: "about", type: "section" },
+    { label: "Preguntas frecuentes", link: "questions", type: "section" }
+  ];
 
   const [isOpen, setOpen] = useState(false);
+  const pathname = usePathname();
 
   const handleScroll = (id) => {
     const element = document.getElementById(id);
@@ -23,30 +24,55 @@ export const NavBar = () => {
 
     if (element) {
       const yOffset =
-        element.getBoundingClientRect().top +
-        window.pageYOffset -
-        navbarOffset;
-
-      window.scrollTo({
-        top: yOffset,
-        behavior: "smooth",
-      });
-
-      setOpen(false); 
+        element.getBoundingClientRect().top + window.pageYOffset - navbarOffset;
+      window.scrollTo({ top: yOffset, behavior: "smooth" });
+      setOpen(false);
     }
   };
 
   const handleOpen = () => setOpen(!isOpen);
 
+  const handleClick = (e, item) => {
+    if (item.type === "section" && pathname === "/") {
+      e.preventDefault();
+      handleScroll(item.link);
+    }
+    setOpen(false);
+  };
+
+  const renderLink = (item) => {
+    if (item.type === "page") {
+      return (
+        <Link
+          href={item.link}
+          className="block py-2 px-3 md:p-0 text-[#132c17] hover:text-[#5DCC6F] dark:text-green-500 dark:hover:text-green-400"
+        >
+          {item.label}
+        </Link>
+      );
+    }
+    // Para secciones, usamos href normal y scroll smooth
+    const href = pathname === "/" ? `#${item.link}` : `/#${item.link}`;
+    return (
+      <a
+        href={href}
+        onClick={(e) => handleClick(e, item)}
+        className="block py-2 px-3 md:p-0 text-[#132c17] hover:text-[#5DCC6F] dark:text-green-500 dark:hover:text-green-400"
+      >
+        {item.label}
+      </a>
+    );
+  };
+
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900 sticky top-0 z-50">
+    <nav className="bg-white dark:bg-gray-900 sticky top-0 z-50">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
-        <a href="#home" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image src={ospLogo} className="mr-5 w-20 h-15" alt="logo" />
-          <span className="self-center md:text-md lg:text-xl italic block font-semibold whitespace-nowrap dark:text-white">
-            Ozama Smart Place
-          </span>
-        </a>
+        <Link
+          href="/"
+          className="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <Image src={ospLogo} className="w-20 h-15" alt="logo" />
+        </Link>
 
         {/* Burger Button */}
         <div className="md:hidden">
@@ -79,19 +105,15 @@ export const NavBar = () => {
         <div className="hidden md:flex items-center md:w-auto md:order-1">
           <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
             {menuItems.map((item, index) => (
-              <li key={index}>
-                <a
-                  href={`#${item.link}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleScroll(item.link);
-                  }}
-                  className="block py-2 px-3 text-[#132c17] border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-[#5DCC6F] md:p-0 dark:text-green-500 dark:hover:text-green-400 dark:border-gray-700"
-                >
-                  {item.label}
-                </a>
-              </li>
+              <li key={index}>{renderLink(item)}</li>
             ))}
+            <li>
+              <a
+                href="/#trailer"
+                className="text-white w-45 bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 mt-5 text-center me-2 mb-2">
+                Ver en acción
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -100,22 +122,11 @@ export const NavBar = () => {
       {isOpen && (
         <div
           id="mobile-menu"
-          className="md:hidden px-4 pb-4 bg-white h-[100vh] dark:bg-gray-900"
+          className="md:hidden px-4 pb-4 bg-white dark:bg-gray-900 h-[100vh]"
         >
           <ul className="flex flex-col font-medium text-center space-y-3">
             {menuItems.map((item, index) => (
-              <li key={index}>
-                <a
-                  href={`#${item.link}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleScroll(item.link);
-                  }}
-                  className="block py-2 px-3 text-[#132c17] border-b border-gray-100 hover:bg-gray-50 dark:text-green-500 dark:hover:text-green-400 dark:border-gray-700"
-                >
-                  {item.label}
-                </a>
-              </li>
+              <li key={index}>{renderLink(item)}</li>
             ))}
           </ul>
         </div>
