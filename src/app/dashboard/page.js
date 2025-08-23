@@ -14,9 +14,9 @@ export default function Dashboard () {
       <main className='text-gray-700'>
         <NavBar />
         <UpButton />
-        <div className='flex flex-col items-center my-10 h-dvh'>
+        <div className='flex flex-col items-center my-10 px-5 h-dvh'>
           <SectionTag title='Para instituciones' />
-          <h1 className='text-3xl md:text-4xl  font-semibold'>
+          <h1 className='text-3xl md:text-4xl  font-semibold text-center'>
             Gestiona tu ciudad con un solo panel
           </h1>
           <p className='text-lg md:text-xl my-3 mx-5 md:mx-0 text-center'>
