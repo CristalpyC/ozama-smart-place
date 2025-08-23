@@ -3,7 +3,7 @@ import React from "react";
 export const TrailerVideo = () => {
   return (
     <div id="trailer">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl text-center text-green-600 font-bold mb-3">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl text-center text-green-600 font-bold mb-3 font-nunito">
         Así transformamos la ciudad
       </h2>
 
