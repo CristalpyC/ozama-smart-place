@@ -17,7 +17,7 @@ export const InstitutionsGallery = () => {
   const [selected, setSelected] = useState(institutions[0]);
 
   return (
-    <div className="w-full py-10 mb-28">
+    <div className="w-full py-10 mb-28 px-5 md:px-0">
       <h2 className="text-4xl font-bold mb-6 text-center">
         Un espacio para cada institución{" "}
       </h2>

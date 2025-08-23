@@ -21,9 +21,9 @@ export default function Mobile () {
       <main className='text-gray-700'>
         <NavBar />
         <UpButton />
-        <div className='flex flex-col items-center my-10 h-dvh'>
+        <div className='flex flex-col items-center my-10 px-5 h-dvh'>
           <SectionTag title='Para ciudadanos' />
-          <h1 className='text-3xl md:text-4xl font-semibold'>
+          <h1 className='text-3xl md:text-4xl font-semibold text-center'>
             Tu ciudad en la palma de tu mano
           </h1>
           <p className='text-lg md:text-xl my-3 mx-5 md:mx-0 text-center'>
@@ -55,12 +55,12 @@ export default function Mobile () {
           />
         </div>
         <div className='flex flex-col items-center' id='citizens'>
-          <h2 className='text-3xl font-medium text-shadow-2xs w-lg md:w-2xl text-center'>
+          <h2 className='text-3xl font-medium text-shadow-2xs w-sm md:w-2xl text-center'>
             Ozama Smart Place te conecta con tu ciudad de manera rápida y
             sencilla
           </h2>
 
-          <div className='flex flex-col md:flex-row w-lg md:w-5xl gap-x-8 gap-y-8 mt-10 mb-8'>
+          <div className='flex flex-col md:flex-row w-sm md:w-5xl gap-x-8 gap-y-8 mt-10 mb-8'>
             <div className='border border-gray-200 rounded-lg p-5 h-44'>
               <DirectionsTransitRounded
                 style={{
@@ -98,7 +98,7 @@ export default function Mobile () {
             </div>
           </div>
 
-          <div className='flex flex-col md:flex-row w-lg md:w-5xl gap-x-8 gap-y-8 mb-12'>
+          <div className='flex flex-col md:flex-row w-sm md:w-5xl gap-x-8 gap-y-8 mb-12'>
             <div className='border border-gray-200 rounded-lg p-5 h-44'>
               <CreditCardRounded
                 style={{
