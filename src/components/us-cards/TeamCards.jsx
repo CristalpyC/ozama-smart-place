@@ -4,22 +4,29 @@ import cristalPic from "../../imgs/cristal-pic.jpg";
 import adalbertPic from "../../imgs/adalberto-pic.png";
 import Image from "next/image";
 import { Zoom } from "react-awesome-reveal";
+import Link from "next/link";
 
 export const TeamCards = () => {
   const members = [
     {
       name: "Cristal Tavárez",
       role: "Desarrolladora de Software",
+      number: "829-386-5447",
+      cvRoute:"https://drive.google.com/file/d/1NuX7fBLQiXqhrlNAYoZCD7N1mT8KpSby/view?usp=sharing",
       pic: cristalPic,
     },
     {
       name: "Adalberto Banks",
       role: "Desarrollador de Software",
+      number: "829-781-1167",
+      cvRoute:"https://drive.google.com/file/d/1rsi4tk4qHesYbh9sq8BlZ9KnWnys5cNq/view?usp=sharing",
       pic: adalbertPic,
     },
     {
       name: "Ariel Custodio",
       role: "Desarrollador de Software",
+      number: "829-410-0341",
+      cvRoute:"https://drive.google.com/file/d/1HKvaGonEP0b-dtuLReE_03RREUKHcnIU/view?usp=sharing",
       pic: arielPic,
     },
   ];
@@ -46,6 +53,16 @@ export const TeamCards = () => {
                 <span className="text-sm text-gray-500 dark:text-gray-400">
                   {items.role}
                 </span>
+                <span className="text-sm text-gray-500 dark:text-gray-400">
+                  {items.number}
+                </span>
+                <Link
+                  href={items.cvRoute}
+                  target="_blank"
+                  className='my-5 mx-5 border-2 border-green-700 bg-green-700 px-5 py-1 text-white rounded-md font-medium hover:bg-green-800'
+                >
+                  Ver CV
+                </Link>
               </div>
             </div>
           ))}
