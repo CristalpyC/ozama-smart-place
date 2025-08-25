@@ -34,8 +34,8 @@ export const Stepper = () => {
           <span className="absolute flex items-center justify-center w-8 h-8 bg-green-200 rounded-full -start-4 ring-4 ring-white dark:ring-gray-900 dark:bg-green-900">
             {svg}
           </span>
-          <h3 className="font-medium leading-tight">¿Como planifico una ruta?</h3>
-          <p className="text-sm">Completa el formulario para reportar un bache, apagón o basura, este reporte llegara directamente al sistema de tickets de la entidad encargada.</p>
+          <h3 className="font-medium leading-tight">¿Cómo planifico una ruta?</h3>
+          <p className="text-sm">Selecciona tu punto de origen y destino en la app, elige el medio de transporte y la ruta sugerida. La app te mostrará las opciones más rápidas o económicas, junto con el tiempo estimado y el costo del viaje.</p>
         </li>
 
         <li className="mb-10 ms-6">
