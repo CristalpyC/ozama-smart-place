@@ -3,7 +3,7 @@ import { SectionTag } from '@/components/SectionTag'
 import { Footer } from '@/components/footer/Footer.jsx'
 import { UpButton } from '@/components/upButton/UpButton'
 import Image from 'next/image'
-import admMockup from '@/imgs/admin-mockup-06.png'
+import admMockup from '@/imgs/admImg.png'
 import { InstitutionsGallery } from "@/components/InstitutionsGallery";
 
 import Link from 'next/link'

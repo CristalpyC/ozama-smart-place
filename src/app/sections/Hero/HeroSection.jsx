@@ -1,6 +1,6 @@
 import { GreenTopWave } from "../../../components/wave/GreenTopWave";
 import "./hero-style.css";
-import mockup from "../../../imgs/osp-mockup-hero.png";
+import mockup from "../../../imgs/homeImgg.png";
 import Image from "next/image";
 import Link from "next/link";
 

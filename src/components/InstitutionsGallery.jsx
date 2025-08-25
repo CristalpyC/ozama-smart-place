@@ -1,16 +1,19 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import adminImg from "@/imgs/admin.png";
-import intrantImg from "@/imgs/admin-mockup-02.png";
-import mopcImg from "@/imgs/admin-mockup-05.png";
-import adnImg from "@/imgs/admin-mockup-06.png";
+import adminImg from "@/imgs/caasdImg.png";
+import intrantImg from "@/imgs/intrantImg.png";
+import mopcImg from "@/imgs/mopcImg.png";
+import adnImg from "@/imgs/adnImg.png";
+import edesImg from "@/imgs/edesImg.png";
+
 
 const institutions = [
   { name: "CAASD", image: adminImg },
   { name: "INTRANT", image: intrantImg },
   { name: "MOPC", image: mopcImg },
   { name: "ADN", image: adnImg },
+  { name: "EDEs", image: edesImg },
 ];
 
 export const InstitutionsGallery = () => {

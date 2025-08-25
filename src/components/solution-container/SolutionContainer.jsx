@@ -7,7 +7,7 @@ import congestedMockup from "../../imgs/congested-mockup.png";
 import routeMockup from "../../imgs/mockup-pic-01.png";
 import payMockup from "../../imgs/pay-mockup.png";
 import LiveRoutesMockup from "../../imgs/routes-mockup-02.png";
-import adminMockup from "../../imgs/admin-mockup.png";
+import adminMockup from "../../imgs/homedesc.png";
 import { Slide } from "react-awesome-reveal";
 
 export const SolutionContainer = () => {

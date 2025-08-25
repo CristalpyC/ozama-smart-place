@@ -12,7 +12,7 @@ import EmojiPeopleRoundedIcon from "@mui/icons-material/EmojiPeopleRounded";
 import LocationCityRoundedIcon from "@mui/icons-material/LocationCityRounded";
 import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
 import payMockupImage from "@/imgs/pay-mockup.png";
-import adminImage from "@/imgs/admin.png";
+import adminImage from "@/imgs/admImg.png";
 
 export default function Home() {
   return (
@@ -101,7 +101,7 @@ export default function Home() {
             </div>
 
             {/* Card instituciones */}
-            <div className="flex-1 bg-green-50/60 border-2 border-transparent shadow-sm hover:shadow-lg hover:shadow-green-200/50 hover:border-emerald-800/60 rounded-xl p-7 flex flex-col transition-all duration-300 ease-in-out">
+            <div className="flex-1 bg-green-50/60 border-2 border-transparent shadow-sm hover:shadow-lg hover:shadow-green-200/50 hover:border-emerald-800/60 rounded-xl p-7 flex flex-col justify-between transition-all duration-300 ease-in-out" style={{ minHeight: '100%' }}>
               <div className="flex flex-row items-center gap-x-3">
                 <div className="bg-green-100 border border-gray-50 p-2 rounded-2xl">
                   <LocationCityRoundedIcon style={{ fontSize: 30, color: "green" }} />
@@ -136,7 +136,7 @@ export default function Home() {
                   className="rounded-lg max-w-xs md:max-w-sm w-full h-auto object-contain"
                 />
               </div>
-              <ButtonCTA href="/dashboard" text="Descubre más" />
+                <ButtonCTA href="/dashboard" text="Descubre más" className="mt-auto" />
             </div>
           </div>
         </div>

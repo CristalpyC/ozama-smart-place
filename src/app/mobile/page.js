@@ -7,6 +7,10 @@ import reportMockup from '@/imgs/reports-mockup.png'
 import congestedMockup from '@/imgs/congested-mockup.png'
 import loginMockup from '@/imgs/login-mockup.png'
 import helpMockup from '@/imgs/help-mockup.png'
+import rutaMockup from '@/imgs/transitoImg.png'
+import omsaMockup from '@/imgs/OMSA.png'
+import metroMockup from '@/imgs/MetroImg.png'
+import tarjetaMockup from '@/imgs/tarjetaDigital.png'
 import { DirectionsTransitRounded, ScheduleRounded, ReportProblemRounded, CreditCardRounded, AppsRounded } from '@mui/icons-material'
 import Link from 'next/link'
 
@@ -133,24 +137,90 @@ export default function Mobile () {
               progreso en tiempo real.
             </p>
           </div>
-        </div>
+        </div> 
 
         <div className="flex flex-col md:flex-row gap-6 items-center justify-center max-w-6xl mx-auto px-6 my-12 mb-24">
+        <Image
+          src={rutaMockup}
+          alt="help mockup"
+          className="w-full max-w-md md:max-w-lg h-auto animate__animated animate__pulse animate__repeat-2"
+        />
+        <div className="w-full md:w-1/2 text-center md:text-left">
+          <h3 className="font-medium text-2xl mb-2">
+            Calcula tu ruta en segundos
+          </h3>
+          <p>
+            Selecciona tu destino y compara rutas para elegir la opción más rápida o económica, 
+            optimizando tu viaje cada día.
+          </p>
+        </div>
+      </div>
+
+         <div className="flex flex-col md:flex-row-reverse gap-6 items-center justify-center max-w-6xl mx-auto px-6 my-12">
           <Image
-            src={helpMockup}
-            alt="help mockup"
+            src={omsaMockup}
+            alt="report mockup"
             className="w-full max-w-md md:max-w-lg h-auto animate__animated animate__pulse animate__repeat-2"
           />
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h3 className="font-medium text-2xl mb-2">
-              Obtén ayuda al instante
+              Revisa la proximidad de las OMSA
             </h3>
             <p>
-              Envía tus dudas o problemas y recibe asistencia rápida y confiable
-              directamente desde la app.
+              Consulta en tiempo real la ubicación y llegada de las OMSA para planificar tu viaje de forma eficiente y sin esperas innecesarias.
             </p>
           </div>
+        </div> 
+
+        <div className="flex flex-col md:flex-row gap-6 items-center justify-center max-w-6xl mx-auto px-6 my-12 mb-24">
+        <Image
+          src={metroMockup}
+          alt="help mockup"
+          className="w-full max-w-md md:max-w-lg h-auto animate__animated animate__pulse animate__repeat-2"
+        />
+        <div className="w-full md:w-1/2 text-center md:text-left">
+          <h3 className="font-medium text-2xl mb-2">
+            Consulta el estado del Metro en tiempo real
+          </h3>
+          <p>
+            Visualiza los niveles de congestión en cada estación y en el mapa mediante una leyenda intuitiva, para planificar tu viaje sin contratiempos.
+          </p>
         </div>
+      </div>
+      
+         <div className="flex flex-col md:flex-row-reverse gap-6 items-center justify-center max-w-6xl mx-auto px-6 my-12">
+          <Image
+            src={tarjetaMockup}
+            alt="report mockup"
+            className="w-full max-w-md md:max-w-lg h-auto animate__animated animate__pulse animate__repeat-2"
+          />
+           <div className="w-full md:w-1/2 text-center md:text-left">
+            <h3 className="font-medium text-2xl mb-2">
+              Tu tarjeta digital siempre a mano
+            </h3>
+            <p>
+              Recarga, consulta tu saldo y paga tu transporte de forma segura y rápida, sin filas ni efectivo, desde cualquier lugar con tu app.
+            </p>
+          </div>
+        </div> 
+
+        <div className="flex flex-col md:flex-row gap-6 items-center justify-center max-w-6xl mx-auto px-6 my-12 mb-24">
+        <Image
+          src={helpMockup}
+          alt="help mockup"
+          className="w-full max-w-md md:max-w-lg h-auto animate__animated animate__pulse animate__repeat-2"
+        />
+        <div className="w-full md:w-1/2 text-center md:text-left">
+          <h3 className="font-medium text-2xl mb-2">
+            Obtén ayuda al instante
+          </h3>
+          <p>
+            Envía tus dudas o problemas y recibe asistencia rápida y confiable
+            directamente desde la app.
+          </p>
+        </div>
+      </div>
+
 
         <Footer />
       </main>
